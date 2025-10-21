@@ -1,0 +1,64 @@
+✅ Transcript of AI Prompts and Responses (for Question 2)
+
+User Prompt #1:
+“I need to write an AreaCalculator class in Java that uses method overloading to calculate area for a circle, rectangle, triangle, and square. Each method should throw an exception if the dimension is less than or equal to zero. Can you show me how to implement this?”
+
+AI Response #1:
+Sure. You can use four overloaded static methods named area. One will accept a double for radius, one will accept two doubles for rectangle width and height, one will accept two ints for triangle base and height, and one will accept a single int for square side. Each method can validate input and then return the computed area. Here is an example:
+
+public class AreaCalculator {
+    public static double area(double radius) {
+        if (radius <= 0) throw new IllegalArgumentException("radius must be > 0");
+        return Math.PI * radius * radius;
+    }
+
+    public static double area(double width, double height) {
+        if (width <= 0 || height <= 0) throw new IllegalArgumentException("width/height must be > 0");
+        return width * height;
+    }
+
+    public static double area(int base, int height) {
+        if (base <= 0 || height <= 0) throw new IllegalArgumentException("base/height must be > 0");
+        return 0.5 * base * height;
+    }
+
+    public static double area(int side) {
+        if (side <= 0) throw new IllegalArgumentException("side must be > 0");
+        return side * side;
+    }
+}
+
+
+User Prompt #2:
+“I also need a Main class that prints the exact output listed in the assignment and demonstrates the exception being thrown. Can you write that part?”
+
+AI Response #2:
+Certainly. Below is a Main class that calls each overloaded method and prints the exact required lines. It also calls one method incorrectly to demonstrate an IllegalArgumentException inside a try/catch:
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Circle radius 3.0 \u2192 area = " + AreaCalculator.area(3.0));
+        System.out.println("Rectangle 5.0 x 2.0 \u2192 area = " + AreaCalculator.area(5.0, 2.0));
+        System.out.println("Triangle base 10, height 6 \u2192 area = " + AreaCalculator.area(10, 6));
+        System.out.println("Square side 4 \u2192 area = " + AreaCalculator.area(4));
+
+        try {
+            System.out.println(AreaCalculator.area(-1.0));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+
+
+User Prompt #3:
+“Write a short explanation in a comment about why overloading is better than naming each method differently.”
+
+AI Response #3:
+You can place this comment inside the Main class:
+
+/*
+ * Overloading keeps the API cleaner by using one logical method name ("area")
+ * for related behaviors. Using separate names like circleArea() or rectangleArea()
+ * works, but it is less consistent and harder to organize compared to overloading.
+ */

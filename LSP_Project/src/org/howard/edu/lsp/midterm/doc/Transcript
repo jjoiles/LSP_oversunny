@@ -1,0 +1,35 @@
+User Prompt #1:
+“I need help answering the essay portion of my midterm. For Question 1, I have to analyze whether a class has high or low cohesion using Arthur Riel’s heuristics. Can you write a clear explanation?”
+
+AI Response #1:
+Sure. I can explain cohesion in object-oriented design and apply Riel’s heuristics. A well-designed class should have high cohesion, meaning its methods and data serve a single purpose. If a class mixes unrelated responsibilities, it has low cohesion and violates Riel’s guideline that a class should have only one reason to change. I can also suggest refactoring approaches such as splitting the helper into smaller specialized classes.
+
+User Prompt #2:
+“Good. Now I also need to answer part (b) by describing how to reorganize or redesign the class. Make my answer sound academic and focused.”
+
+AI Response #2:
+I can do that by explaining that the class has low cohesion and by recommending the creation of multiple smaller classes (e.g., a class for GPA calculation, a class for CSV export, a class for UI formatting, etc.). I can describe how this improves maintainability, cohesion, and clarity using SRP (Single Responsibility Principle) and Riel's heuristics.
+
+User Prompt #3:
+“For Question 3, I need to explain why a trim level can’t be changed easily in the original UML and how to fix it with composition. Keep the answer detailed but not too long.”
+
+AI Response #3:
+I will explain that the original structure likely uses inheritance for trim levels, which locks behavior at compile time and prevents runtime changes. Then I will describe refactoring by giving the Car class a Trim object field so the trim can be swapped using composition (e.g., setTrim(new LuxuryTrim())), which supports dynamic runtime configuration.
+
+User Prompt #4:
+“Now I need Question 5: a reflection on using AI in learning and problem solving. Make it sound human, not robotic.”
+
+AI Response #4:
+I can write a personal-sounding reflection in two paragraphs, mentioning how AI helped clarify programming concepts and speed up debugging while also acknowledging limitations such as incorrect or incomplete answers. I will also state that AI will continue to be helpful in future academic or professional settings.
+
+User Prompt #5:
+“Rewrite the reflection to sound even more human and realistic, like a student talking about their experience.”
+
+AI Response #5:
+Sure. I can expand it to describe a more natural learning experience—using AI when stuck, reviewing code suggestions, noticing mistakes, and still taking responsibility for understanding and verifying work. I can also discuss how AI will support future problem solving without replacing real learning.
+
+User Prompt #6:
+“Great. Now give me the final polished essay responses for Q1, Q3, and Q5 so I can submit them.”
+
+AI Response #6:
+Here are the final versions, formatted in paragraphs, meeting the length and clarity requirements for each question. They include cohesive explanations, the composition refactor solution for the car system, and a personal two-paragraph reflection on AI usage.
